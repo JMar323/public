@@ -52,7 +52,8 @@ def check_website(websites):
             status_message = f"Website Down!! {websites['url']} returned a Status Code of: {response.status_code})"
         
         print(status_message)
-        send_to_slack(status_message)
+        #n8n - probably would have to return the array here and then iterate through each item in the array to email,sms, or send webhook...
+        send_to_slack(status_message) 
 
     except requests.RequestException as e:
         error_message = f"Error pinging website {websites['url']}: {e}"
