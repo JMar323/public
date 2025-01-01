@@ -31,7 +31,7 @@ def send_to_slack(message):
     response = requests.post(slack_webhook_url, data=json.dumps(data), headers={'Content-Type': 'application/json'})
     if response.status_code != 200:
         print(f"Failed to send notification to Slack: {response.status_code}, {response.text}")
-
+#check dem websites
 def check_website(websites):
     try:
         # Fetch the response code from the website 
@@ -63,4 +63,4 @@ def check_website(websites):
 for site in websites:
     check_website(site)
 
-#print ("process complete")
+#game blouses..
